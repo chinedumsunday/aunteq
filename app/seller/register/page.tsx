@@ -71,7 +71,7 @@ export default function SellerRegistration() {
     },
   })
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(_values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
     // Simulate API call
@@ -99,7 +99,7 @@ export default function SellerRegistration() {
         <CardHeader>
           <CardTitle className="text-2xl">Become a Seller</CardTitle>
           <CardDescription>
-            Register your NFT collection and start selling merchandise on our platform. We'll review your application
+            Register your NFT collection and start selling merchandise on our platform. We&#39;ll review your application
             and get back to you within 2-3 business days.
           </CardDescription>
         </CardHeader>
@@ -145,7 +145,7 @@ export default function SellerRegistration() {
                       <FormControl>
                         <Input placeholder="https://opensea.io/collection/your-collection" {...field} />
                       </FormControl>
-                      <FormDescription>We'll verify your ownership of this collection.</FormDescription>
+                      <FormDescription>We&#39;ll verify your ownership of this collection.</FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -235,7 +235,7 @@ export default function SellerRegistration() {
                       <FormControl>
                         <Input placeholder="contact@yourbrand.com" type="email" {...field} />
                       </FormControl>
-                      <FormDescription>We'll use this email to contact you about your application.</FormDescription>
+                      <FormDescription>We&#39;ll use this email to contact you about your application.</FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -280,11 +280,11 @@ export default function SellerRegistration() {
           <ul className="space-y-2">
             <li className="flex items-start">
               <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-              <span className="text-sm">We'll review your application within 2-3 business days</span>
+              <span className="text-sm">We&#39;ll review your application within 2-3 business days</span>
             </li>
             <li className="flex items-start">
               <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-              <span className="text-sm">If approved, you'll receive an email with login credentials</span>
+              <span className="text-sm">If approved, you&#39;ll receive an email with login credentials</span>
             </li>
             <li className="flex items-start">
               <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />

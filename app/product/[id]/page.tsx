@@ -99,7 +99,7 @@ const productData: ProductData = {
   isLimited: true,
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage({ _params }: { params: { id: string } }) {
   const { addToCart } = useCart()
   const { toast } = useToast()
   const [selectedImage, setSelectedImage] = useState(0)

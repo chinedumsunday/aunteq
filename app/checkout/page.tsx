@@ -21,7 +21,7 @@ enum CheckoutStep {
   Review = "review",
 }
 
-const paymentMethods = [
+const _paymentMethods = [
   {
     id: "card",
     name: "Credit Card",
@@ -214,7 +214,7 @@ export default function CheckoutPage() {
     }
   }
 
-  const getStepLabel = (step: CheckoutStep) => {
+  const _getStepLabel = (step: CheckoutStep) => {
     switch (step) {
       case CheckoutStep.Information:
         return "Information"
@@ -238,7 +238,7 @@ export default function CheckoutPage() {
     return (
       <div className="container max-w-4xl py-12 text-center">
         <h1 className="text-2xl font-bold mb-4">Your Cart is Empty</h1>
-        <p className="text-muted-foreground mb-6">You don't have any items in your cart.</p>
+        <p className="text-muted-foreground mb-6">You don&apos;t have any items in your cart.</p>
         <Button asChild>
           <Link href="/marketplace">Continue Shopping</Link>
         </Button>
@@ -472,7 +472,7 @@ export default function CheckoutPage() {
                         <Wallet className="h-12 w-12 mb-4 mx-auto text-primary" />
                         <h3 className="text-lg font-medium mb-2">Pay with Cryptocurrency</h3>
                         <p className="text-muted-foreground mb-4">
-                          You'll be asked to connect your wallet in the next step
+                          You&apos;ll be asked to connect your wallet in the next step
                         </p>
                         <Button onClick={() => handleRadioChange("paymentMethod", "crypto")} variant="outline">
                           Continue with Crypto
@@ -499,7 +499,7 @@ export default function CheckoutPage() {
                         </svg>
                         <h3 className="text-lg font-medium mb-2">Pay with PayPal</h3>
                         <p className="text-muted-foreground mb-4">
-                          You'll be redirected to PayPal to complete your purchase
+                          You&apos;ll be redirected to PayPal to complete your purchase
                         </p>
                         <Button onClick={() => handleRadioChange("paymentMethod", "paypal")} variant="outline">
                           Continue with PayPal

@@ -315,7 +315,7 @@ export default function SellerVerification() {
                     <div>
                       <h4 className="font-medium">What types of ID are accepted?</h4>
                       <p className="text-sm text-muted-foreground">
-                        We accept government-issued photo IDs such as passports, driver's licenses, and national ID
+                        We accept government-issued photo IDs such as passports, driver&#39;s licenses, and national ID
                         cards.
                       </p>
                     </div>
@@ -323,7 +323,7 @@ export default function SellerVerification() {
                       <h4 className="font-medium">How do I prove I own my NFT collection?</h4>
                       <p className="text-sm text-muted-foreground">
                         You can provide a screenshot of your wallet showing ownership, a signed message from your
-                        wallet, or access to the collection's smart contract.
+                        wallet, or access to the collection&#39;s smart contract.
                       </p>
                     </div>
                     <div>

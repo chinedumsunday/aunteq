@@ -148,7 +148,7 @@ export default function SellerLogin() {
           </form>
         </CardContent>
         <CardFooter className="flex flex-col items-center justify-center space-y-2">
-          <div className="text-sm text-muted-foreground">Don't have a seller account yet?</div>
+          <div className="text-sm text-muted-foreground">Don&apos;t have a seller account yet?</div>
           <Button variant="link" asChild>
             <Link href="/seller/register">Apply to become a seller</Link>
           </Button>

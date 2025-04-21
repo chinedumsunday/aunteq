@@ -296,7 +296,7 @@ export default function SellerContracts() {
                     <AccordionContent>
                       <div className="space-y-4">
                         <p className="text-sm">
-                          Either party may terminate the agreement with 30 days' written notice. Upon termination:
+                          Either party may terminate the agreement with 30 days&apos; written notice. Upon termination:
                         </p>
                         <ul className="list-disc pl-5 text-sm space-y-1">
                           <li>Your products will be removed from the platform</li>

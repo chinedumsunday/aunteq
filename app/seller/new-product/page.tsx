@@ -86,7 +86,7 @@ export default function NewProduct() {
     setImages((prev) => prev.filter((_, i) => i !== index))
   }
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(_values: z.infer<typeof formSchema>) {
     if (images.length === 0) {
       toast({
         title: "Error",
@@ -482,7 +482,7 @@ export default function NewProduct() {
                     <div className="bg-muted p-4 rounded-md">
                       <h4 className="font-medium mb-2">Profit Distribution Example</h4>
                       <p className="text-sm text-muted-foreground mb-4">
-                        Based on your settings, here's how profits would be distributed for a product with a price of
+                        Based on your settings, here&apos;s how profits would be distributed for a product with a price of
                         $100:
                       </p>
 
@@ -527,7 +527,7 @@ export default function NewProduct() {
                               terms of service
                             </Link>{" "}
                             and confirm that you have the rights to sell merchandise based on this NFT collection. You
-                            also agree to the 20% platform fee and the community share percentage you've set.
+                            also agree to the 20% platform fee and the community share percentage you&apos;ve set.
                           </FormDescription>
                         </div>
                         <FormMessage />
