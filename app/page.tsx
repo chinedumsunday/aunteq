@@ -1,101 +1,141 @@
+"use client"
+
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import CategoryCard from "@/components/CategoryCard";
+import TrendingSection from "@/components/TrendingSection";
+import CollectionSpotlight from "@/components/CollectionSpotlight";
+
+
 
 export default function Home() {
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative">
+        <div className="relative h-screen max-h-[600px] overflow-hidden">
+          <div className="absolute inset-0">
+            <iframe 
+              src='https://my.spline.design/theorbhand-49fe0e3341818c4ccd128ed9c080eb6b/' 
+              frameBorder='0' 
+              width='100%' 
+              height='100%'
+              className="w-full h-full object-cover"
+            ></iframe>
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute bottom-0 left-0 w-full h-17 bg-black"></div>
+          </div>
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-4 text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+                NEW SEASON DROPS
+              </h1>
+              <p className="text-xl text-white mb-8">
+                Exclusive merch from your favorite NFT collections
+              </p>
+              <div className="flex justify-center">
+                <Button asChild size="lg" className="bg-primary text-primary-foreground neon-box">
+                  <Link href="/marketplace">WEAR YOUR ART</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-10">SHOP BY CATEGORY</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <CategoryCard title="T-SHIRTS" image="/placeholder.svg" href="/marketplace/tshirts" />
+            <CategoryCard title="HOODIES" image="/placeholder.svg" href="/marketplace/hoodies" />
+            <CategoryCard title="ACCESSORIES" image="/placeholder.svg" href="/marketplace/accessories" />
+            <CategoryCard title="LIMITED EDITIONS" image="/placeholder.svg" href="/marketplace/limited" />
+          </div>
+        </div>
+      </section>
+
+      {/* Collections Banner */}
+      <section className="py-12 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="md:w-1/2 mb-8 md:mb-0">
+              <h2 className="text-3xl font-bold mb-4">EXCLUSIVE NFT COLLECTIONS</h2>
+              <p className="text-lg mb-6">Merch inspired by the world's most iconic NFT collections</p>
+              <Button asChild>
+                <Link href="/collections">BROWSE COLLECTIONS</Link>
+              </Button>
+            </div>
+            <div className="md:w-1/2">
+              <Image
+                src="/placeholder.svg"
+                alt="NFT Collections"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trending Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-10">TRENDING NOW</h2>
+          <TrendingSection />
+        </div>
+      </section>
+
+      {/* Collection Spotlight */}
+      <section className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-10">COLLECTION SPOTLIGHT</h2>
+          <CollectionSpotlight />
+        </div>
+      </section>
+
+      {/* Artist Banner */}
+      <section className="py-12 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4">MEET THE ARTISTS</h2>
+            <p className="text-lg mb-6 max-w-2xl mx-auto">
+              Discover the talented artists behind your favorite NFT collections and their exclusive merchandise
+              collaborations.
+            </p>
+            <Button asChild>
+              <Link href="/artists">EXPLORE ARTISTS</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 max-w-xl text-center">
+          <h2 className="text-3xl font-bold mb-4">STAY UPDATED</h2>
+          <p className="text-lg mb-6">
+            Subscribe to our newsletter for exclusive drops, limited editions and special offers.
+          </p>
+          <form className="flex flex-col sm:flex-row gap-4">
+            <input
+              type="email"
+              placeholder="Your email address"
+              className="flex-grow px-4 py-2 rounded border border-muted"
+              required
+            />
+            <Button type="submit">SUBSCRIBE</Button>
+          </form>
+          <p className="text-sm text-muted-foreground mt-4">
+            By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
+
